@@ -10,7 +10,9 @@ Welcome to Dewy Trainer.
 
 Dewy Trainer is an interactive library training system designed to teach the user about the Dewey decimal system.
 
-The software is comprised of a c# windows forms application that makes use of lists to store the data.
+The software is comprised of a c# windows forms application that makes use of lists (the first game "Replacing Books") and dictionaries (the second game "Identify Areas") to store the data.
+
+The software contains various games to take the user through the dewey decimal system to give them a well rounded learning and training expierience.
 
 
 How to use
@@ -26,7 +28,7 @@ To use the software:
 		1. Replacing Books
 		2. Identify Areas
 		3. Find Call Numbers
-	Note: Currently only Replacing Books is implemented with the other 2 games to follow soon.
+	Note: Currently only Replacing Books and Identify Areas are implemented with the final game to follow soon.
 
 	Replacing Books:
 	Select the "Replacing Books" book option on the bottom of the shelf on the welcome screen, this will start the game.
@@ -45,7 +47,44 @@ To use the software:
 	the user will be notified and a "life will be lost". At the top of the screen, located in a brown book ontop of the
 	shelf, the users remaining lives are displayed (indicated by hearts). Each time an incorrect order is submitted 
 	an animation will play and the heart will break, indicating the loss of a life. The game is timed and has a limit
-	of 3 minutes, after which the game will be ended and count as a loss.
+	of 3 minutes, after which the game will be ended and count as a loss. Upon the end of a round the user may click
+	the "Play Again" option located on the bottom shelf of the results screen, this will start the round over and allow
+	the user to replay the selected game. The results screen shows a close button in the top left indicated by
+	an "X", upon clicking, the game will close along with the form.
+
+	
+	Identify Areas:
+	Select the "Identify Areas" book option on the bottom of the shelf on the welcome screen, this will start the game.
+	The game will open to a shelf view containing the book options, stacked, on the bottom left. By defualt the stack of
+	books will contain a call number that matches a description that is shown on the right most shelf of the screen.
+	The right most shelf, by default, shows the possible descriptions that could match one of the book answers. The user
+	will click and drag the book answer into the middle shelf, and drop it next to the corresponding answer. Upon dragging
+	a book, the options of where it may be placed will be "highlighted" by showing a darkened overlay. The user must match
+	answer (whether its call numbers to descriptions or vice versa) to a corresponding question. The game functions on the
+	"match column" premise and a user must associate each answer with a question. Located in the top left is a menu swap
+	button, indicated by a menu icon, upon clicking, the game will restart in the reverse order, the stack of books in the
+	left will display the descriptions and the list of possible call numbers will be shown in the shelf on the right. The
+	game shows the stack of 4 books with 7 possible answers. Located above the book stack, on the shelf above, the round time
+	is displayed, the user has 3 minutes to complete their answers before the round is ended and counted as a loss. The user
+	has 3 chances at making a submission, each time the answers are submitted incorrectly, the user will lose a "life" or
+	chance. The current status of the users "lives" are shown on the spine of a book below the round time. If the user loses
+	all "lives" the round will end and count as a loss. Located in the top right, are the reset and submit buttons, the reset
+	button is indicated by a arrow circling itself and the submit button is indicated as a tick. The reset button will move
+	all placed book answers back to the initial stack on the left in their initial order. Upon clicking the submit button the
+	game will validate that all answers (answer books) are placed in the middle shelf and are associated with a question, if 
+	not all books (answers) are submitted, the remaining possible slots to place said books will "blink" and be indicated
+	by flashing overlays. If all books are submitted, the answers submitted will be validated against the questions, if
+	the submission of answers are not all correct, the user will be informed by a popup and a life will be subtracted and
+	an animation of a heart breaking will be showed in the top left. If the order is correct the round will end and be counted
+	as a win. If the incorrect answers are submitted 3 times, if the round timer hits 3 minutes, or the correct answers are
+	submitted, the round will end and a feedback screen will be shown. The feedback screen will show the result of the game,
+	whether its a win or loss, the round score, and the time taken. The score is comprised of the amount of lives remaining,
+	multiplied by the game time in seconds minus the time taken in seconds. The results screen also shows the game time taken.
+	Located towards the bottom of the results screen the "Play Again" option is shown, when the user clicks this, the round 
+	is started over in the reverse configuration, if the previous game was matching the call numbers to the descriptions,
+	the new round will be the opposite and vice versa. The results screen shows a close button in the top left indicated by
+	an "X", upon clicking, the game will close along with the form.
+	 
 		
 
 Other Information
@@ -53,8 +92,12 @@ Other Information
 
 The game displays a random set of dewey decimals in a series of books that are randomly assigned a color.
 
-The data concerning both the books and slots on the shelf is stored using a list of a custom structure type, one for
+In the first game "Replacing Books", the data concerning both the books and slots on the shelf is stored using a list of a custom structure type, one for
 book data and the other for slot data.
+
+In the second game "Identify Areas", a dictionary is used to hold all of the call numbers and their descriptions and lists of custom structures are used
+to hold the book data, as well as this, a custom label class is created and used to apply custom styling to the labels displayed on the books when the text
+is disabled
 
 The app contains gifs designed to animate once before stopping, if a new animation attempts to start before the previous
 animation completes, the previous animation will be instantly completed and the new animation will begin.
@@ -79,11 +122,19 @@ Throughout the app, various sources were used:
 	- https://stackoverflow.com/a/3259925 > determine if lists contains any values
 	- https://stackoverflow.com/a/2681968 > getting the current control in execuion of its event
 	- https://stackoverflow.com/a/13528048 > closing a form from its user control
+	- https://stackoverflow.com/a/6002751 > changing the disabled text color of a label
+	- https://stackoverflow.com/a/4262134 > randomise a list (according to GUID)
 	
 	TutorialsPoint:
 	- https://www.tutorialspoint.com/Bubble-Sort-program-in-Chash > bubble sort assistance
 	
 	Microsoft:
 	- https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/how-to-play-a-sound-from-a-windows-form?view=netframeworkdesktop-4.8 > playing custom sounds
+
+	CSharpInDeep
+	- https://csharpindeep.wordpress.com/2013/08/10/c-snippet-shuffling-a-dictionary-beginner/ > randomise the order of a dictionary
 	
 	
+Github
+------------------------------------------------------------------------------------------------------------
+	https://github.com/jake1970/PROG_POE_Jake_young_ST10081936.git

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,8 +14,8 @@ namespace PROG_POE_Jake_young_ST10081936
     public partial class UserFeedback : UserControl
     {
 
+      
 
-    
         //if the game was a win or loss
         private bool gameOutcome = false;
 
@@ -90,5 +91,72 @@ namespace PROG_POE_Jake_young_ST10081936
             ((Form)this.TopLevelControl).Close();
         }
         //------------------------------------------------------------------------------------------------------------------
+
+
+
+        private void playAgain()
+        {
+
+            var currentGameModifier = true;
+                
+
+                foreach (var gameInstance in this.Parent.Controls)
+                {
+              
+
+                if ((gameInstance is IdentifyAreas))
+                {
+                    currentGameModifier = (gameInstance as IdentifyAreas).UseCallNumbers;
+                   
+                }
+
+                if (!(gameInstance is UserFeedback))
+                    {
+                        this.Parent.Controls.Remove((Control)gameInstance);
+                       
+                    }
+                }
+
+
+                switch (this.Parent.Text)
+                {
+                    case "Sort Books":
+                        {
+
+                        GlobalGameData.GenerateGameOne(this.Parent);
+                        
+                        }
+                        break;
+                    case "Identify Areas":
+                        {
+                        
+                        GlobalGameData.GenerateGameTwo(this.Parent, !currentGameModifier);
+
+                        }
+                        break;
+                    default:
+                        {
+                            var inform = MessageBox.Show("Error", "Unable to replay game please select it from the menu");
+                        }
+                        break;
+                }
+
+
+
+                this.Parent.Controls.Remove(this);
+
+
+            
+        }
+
+        private void lblPlayAgain_Click(object sender, EventArgs e)
+        {
+            playAgain();
+        }
+
+        private void panel6_Click(object sender, EventArgs e)
+        {
+            playAgain();
+        }
     }
 }

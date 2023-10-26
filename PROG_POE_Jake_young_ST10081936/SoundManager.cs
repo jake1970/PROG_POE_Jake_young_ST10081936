@@ -18,7 +18,7 @@ namespace PROG_POE_Jake_young_ST10081936
         /// Method to play custom game sounds
         /// </summary>
         /// <param name="sound"></param>
-        public void PlaySound(string sound)
+        public async void PlaySound(string sound)
         {
             //defualt sound file
             var soundFile = Resources.BookClick;
@@ -55,11 +55,16 @@ namespace PROG_POE_Jake_young_ST10081936
             {
                 //source - https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/how-to-play-a-sound-from-a-windows-form?view=netframeworkdesktop-4.8
                 //new sound player
-                SoundPlayer simpleSound = new SoundPlayer(soundFile);
+                await Task.Run(() => {
+
+                    SoundPlayer simpleSound = new SoundPlayer(soundFile);
 
 
-                //play the selected sound
-                simpleSound.Play();
+                    //play the selected sound
+                    simpleSound.Play();
+
+                });
+               
                 
             }
             catch

@@ -39,6 +39,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblScore = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblPlayAgain = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,10 +167,27 @@
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Controls.Add(this.lblPlayAgain);
             this.panel6.Location = new System.Drawing.Point(1292, 985);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(610, 148);
             this.panel6.TabIndex = 31;
+            this.panel6.Click += new System.EventHandler(this.panel6_Click);
+            // 
+            // lblPlayAgain
+            // 
+            this.lblPlayAgain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPlayAgain.AutoSize = true;
+            this.lblPlayAgain.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayAgain.ForeColor = System.Drawing.Color.White;
+            this.lblPlayAgain.Location = new System.Drawing.Point(91, 39);
+            this.lblPlayAgain.Name = "lblPlayAgain";
+            this.lblPlayAgain.Size = new System.Drawing.Size(420, 82);
+            this.lblPlayAgain.TabIndex = 10;
+            this.lblPlayAgain.Text = "Play Again?";
+            this.lblPlayAgain.Click += new System.EventHandler(this.lblPlayAgain_Click);
             // 
             // panel5
             // 
@@ -224,6 +243,8 @@
             this.panel4.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -244,5 +265,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblPlayAgain;
     }
 }

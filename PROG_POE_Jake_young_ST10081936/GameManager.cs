@@ -41,9 +41,9 @@ namespace PROG_POE_Jake_young_ST10081936
         private Timer playerClock = new Timer();
 
         //the control where dynamic components must be created
-        private Control parentControl = null; //used to create the game over screen
+        private Control parentControl; //used to create the game over screen
 
-        
+        //------------------------------------------------------------------------------------------------------------------
         /// <summary>
         /// constructor
         /// </summary>
@@ -56,7 +56,8 @@ namespace PROG_POE_Jake_young_ST10081936
             this.playerClock = playerClock;
             this.parentControl = parentControl;
         }
-        
+        //------------------------------------------------------------------------------------------------------------------
+
 
         //------------------------------------------------------------------------------------------------------------------
         /// <summary>
@@ -81,7 +82,14 @@ namespace PROG_POE_Jake_young_ST10081936
             userPopup.GameTime = GlobalGameData.GameTime;
 
             //set the dynamic components parent
-            userPopup.Parent = parentControl; 
+            userPopup.Parent = parentControl.Parent;
+
+            //set the position on the form of the dynamic component
+            userPopup.Location = parentControl.Location;
+
+            //set the padding for the dynamic component
+            //the padding eliminates the bottom and right side border
+            userPopup.Margin = new Padding(0);
 
             //set the size of the dynamic component
             userPopup.Size = parentControl.Size;
@@ -92,7 +100,7 @@ namespace PROG_POE_Jake_young_ST10081936
             //increase layer order of dynamic component
             userPopup.BringToFront();
 
-
+           
 
            
          

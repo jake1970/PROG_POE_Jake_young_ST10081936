@@ -11,9 +11,13 @@ using System.Windows.Forms;
 
 namespace PROG_POE_Jake_young_ST10081936
 {
+
+
     public partial class Form1 : Form
     {
-        public Form1()
+        
+ 
+        public Form1(short gameSelector)
         {
             InitializeComponent();
 
@@ -25,7 +29,53 @@ namespace PROG_POE_Jake_young_ST10081936
 
             //disable minimise button
             this.MinimizeBox = false;
+
+            //call method to display the selected game
+            Selectgame(gameSelector);
         }
+
+
+        //------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Method to select the game to play
+        /// </summary>
+        /// <param name="gameSelector"></param>
+        /// source - https://stackoverflow.com/a/14282467
+        public void Selectgame (short gameSelector)
+        {
+
+          switch(gameSelector)
+            {
+                case 1:
+                    {
+                        //call method to load the first/default game (replacing books/part one)
+                        GlobalGameData.GenerateGameOne(this); //pass current form
+
+                    }
+                    break;
+                case 2:
+                    {
+                        //call method to load the second game
+                        GlobalGameData.GenerateGameTwo(this, true); //pass current form and game mode (true)
+
+                    }
+                    break;
+                case 3:
+                    //load part 3 (coming soon)
+                    break;
+                default:
+                    {
+                        //call method to load the default game (replacing books/part one)
+                        GlobalGameData.GenerateGameOne(this);
+                    }
+                    break;
+            }
+         
+
+        }
+        //------------------------------------------------------------------------------------------------------------------
+
+
 
         //------------------------------------------------------------------------------------------------------------------
         /// <summary>
@@ -43,6 +93,7 @@ namespace PROG_POE_Jake_young_ST10081936
             }
             
         }
+
         //------------------------------------------------------------------------------------------------------------------
 
     }

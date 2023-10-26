@@ -62,8 +62,43 @@ namespace PROG_POE_Jake_young_ST10081936
         //------------------------------------------------------------------------------------------------------------------
 
 
+        //------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Method to assign a horizontal book image (color) randomly
+        /// </summary>
+        /// <param name="randomTexture"></param>
+        /// <returns></returns>
+        public Image GetHorizontalBookImage(int randomTexture) //input: random number between 1 and 4
+        {
+            //new image set to default, if random number = 4 then use default image
+            Image bookImage = Resources.red_book_side;
+
+
+            switch (randomTexture)
+            {
+                case 1:
+                    //if random number is 1
+                    bookImage = Resources.purple_book_side;
+                    break;
+
+                case 2:
+                    //if random number is 2
+                    bookImage = Resources.dark_blue_book_side;
+                    break;
+
+                case 3:
+                    //if random number is 3
+                    bookImage = Resources.blue_book_side;
+                    break;
+            }
+
+            return bookImage;
+        }
+        //------------------------------------------------------------------------------------------------------------------
+
+
     }
-     
+
     //******************************************************************************************************************
 
 

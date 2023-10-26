@@ -15,7 +15,7 @@ namespace PROG_POE_Jake_young_ST10081936
         public WelcomeScreen()
         {
             InitializeComponent();
-
+            
             InitialiseMenu();
            
         }
@@ -29,6 +29,10 @@ namespace PROG_POE_Jake_young_ST10081936
             //part one  (sort books) navigation components
             panel6.Click += new EventHandler(StartPartOne_Click);
             label5.Click += new EventHandler(StartPartOne_Click);
+
+            //part two  (identify areas) navigation components
+            panel4.Click += new EventHandler(StartPartTwo_Click);
+            label3.Click += new EventHandler(StartPartTwo_Click);
 
             //set the sound effect for mouse enter "hover"
             panel6.MouseEnter += new EventHandler(Option_MouseEnter);
@@ -52,10 +56,32 @@ namespace PROG_POE_Jake_young_ST10081936
             soundEffect.PlaySound("ButtonClick");
 
             //show part one "order books"
-            Form1 partOne = new Form1();
+            Form1 partOne = new Form1(1);
             partOne.Show();
         }
         //------------------------------------------------------------------------------------------------------------------
+
+        //------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Enter POE Part 2 - Identify Areas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StartPartTwo_Click(object sender, EventArgs e)
+        {
+            //new sound manager object
+            SoundManager soundEffect = new SoundManager();
+
+            //call method to play sound effect
+            soundEffect.PlaySound("ButtonClick");
+
+            //show part two "identify  areas"
+            Form1 partTwo = new Form1(2);
+            partTwo.Show();
+        }
+        //------------------------------------------------------------------------------------------------------------------
+
+
 
         //------------------------------------------------------------------------------------------------------------------
         /// <summary>
