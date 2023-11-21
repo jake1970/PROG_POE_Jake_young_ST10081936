@@ -22,7 +22,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PROG_POE_Jake_young_ST10081936.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap animatedLife {
+        public static System.Drawing.Bitmap animatedLife {
             get {
                 object obj = ResourceManager.GetObject("animatedLife", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap blue_book {
+        public static System.Drawing.Bitmap blue_book {
             get {
                 object obj = ResourceManager.GetObject("blue_book", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap blue_book_side {
+        public static System.Drawing.Bitmap blue_book_side {
             get {
                 object obj = ResourceManager.GetObject("blue_book_side", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +93,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream BookClick {
+        public static System.IO.UnmanagedMemoryStream BookClick {
             get {
                 return ResourceManager.GetStream("BookClick", resourceCulture);
             }
@@ -102,7 +102,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream BookDrop {
+        public static System.IO.UnmanagedMemoryStream BookDrop {
             get {
                 return ResourceManager.GetStream("BookDrop", resourceCulture);
             }
@@ -111,7 +111,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ButtonClick {
+        public static System.IO.UnmanagedMemoryStream ButtonClick {
             get {
                 return ResourceManager.GetStream("ButtonClick", resourceCulture);
             }
@@ -120,7 +120,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ButtonHover {
+        public static System.IO.UnmanagedMemoryStream ButtonHover {
             get {
                 return ResourceManager.GetStream("ButtonHover", resourceCulture);
             }
@@ -129,7 +129,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dark_blue_book_side {
+        public static System.Drawing.Bitmap dark_blue_book_side {
             get {
                 object obj = ResourceManager.GetObject("dark_blue_book_side", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -137,9 +137,36 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 400#Language#1
+        ///410#Linguistics#2
+        ///411#Writing systems#3
+        ///412#Etymology#3
+        ///413#Dictionaries#3
+        ///414#Phonology &amp; phonetics#3
+        ///420#English &amp; Old English languages#2
+        ///421#English writing system &amp; phonology#3
+        ///422#English etymology#3
+        ///423#English dictionaries#3
+        ///425#English grammar#3
+        ///430#German &amp; related languages#2
+        ///431#German writing systems &amp; phonology#3
+        ///432#German etymology#3
+        ///433#German dictionaries#3
+        ///435#German grammar#3
+        ///440#French &amp; related languages#2
+        ///441#French writing systems &amp; phonology#3
+        ///442#Fr [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string DeweyFile {
+            get {
+                return ResourceManager.GetString("DeweyFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon Dewy_Trainer {
+        public static System.Drawing.Icon Dewy_Trainer {
             get {
                 object obj = ResourceManager.GetObject("Dewy_Trainer", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -149,7 +176,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream GameLose {
+        public static System.IO.UnmanagedMemoryStream GameLose {
             get {
                 return ResourceManager.GetStream("GameLose", resourceCulture);
             }
@@ -158,7 +185,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream GameWin {
+        public static System.IO.UnmanagedMemoryStream GameWin {
             get {
                 return ResourceManager.GetStream("GameWin", resourceCulture);
             }
@@ -167,7 +194,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap green_book {
+        public static System.Drawing.Bitmap green_book {
             get {
                 object obj = ResourceManager.GetObject("green_book", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -177,7 +204,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap grey_book_side {
+        public static System.Drawing.Bitmap grey_book_side {
             get {
                 object obj = ResourceManager.GetObject("grey_book_side", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -187,7 +214,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap purple_book {
+        public static System.Drawing.Bitmap purple_book {
             get {
                 object obj = ResourceManager.GetObject("purple_book", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -197,7 +224,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap purple_book_side {
+        public static System.Drawing.Bitmap purple_book_side {
             get {
                 object obj = ResourceManager.GetObject("purple_book_side", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -207,7 +234,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap red_book {
+        public static System.Drawing.Bitmap red_book {
             get {
                 object obj = ResourceManager.GetObject("red_book", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -217,7 +244,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap red_book_side {
+        public static System.Drawing.Bitmap red_book_side {
             get {
                 object obj = ResourceManager.GetObject("red_book_side", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -227,7 +254,7 @@ namespace PROG_POE_Jake_young_ST10081936.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream WrongAnswer {
+        public static System.IO.UnmanagedMemoryStream WrongAnswer {
             get {
                 return ResourceManager.GetStream("WrongAnswer", resourceCulture);
             }

@@ -76,19 +76,25 @@
     <Compile Include="CustomLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GameManager.cs" />
-    <Compile Include="GifListManager.cs" />
-    <Compile Include="GlobalGameData.cs" />
-    <Compile Include="IdentifyAreas.cs">
+    <Compile Include="UserControls\FindCallNumbers.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="IdentifyAreas.Designer.cs">
+    <Compile Include="UserControls\FindCallNumbers.Designer.cs">
+      <DependentUpon>FindCallNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GameManager.cs" />
+    <Compile Include="Classes\GifListManager.cs" />
+    <Compile Include="Classes\GlobalGameData.cs" />
+    <Compile Include="UserControls\IdentifyAreas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\IdentifyAreas.Designer.cs">
       <DependentUpon>IdentifyAreas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -98,54 +104,59 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ReplacingBooks.cs">
+    <Compile Include="Classes\RedBlackTree.cs" />
+    <Compile Include="UserControls\ReplacingBooks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ReplacingBooks.Designer.cs">
+    <Compile Include="UserControls\ReplacingBooks.Designer.cs">
       <DependentUpon>ReplacingBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShelfContent.cs" />
-    <Compile Include="ShelfContentIdentifyAreas.cs" />
-    <Compile Include="SoundManager.cs" />
-    <Compile Include="UserFeedback.cs">
+    <Compile Include="Classes\ShelfContent.cs" />
+    <Compile Include="Classes\ShelfContentFindCallNumbers.cs" />
+    <Compile Include="Classes\ShelfContentIdentifyAreas.cs" />
+    <Compile Include="Classes\SoundManager.cs" />
+    <Compile Include="UserControls\UserFeedback.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserFeedback.Designer.cs">
+    <Compile Include="UserControls\UserFeedback.Designer.cs">
       <DependentUpon>UserFeedback.cs</DependentUpon>
     </Compile>
-    <Compile Include="Welcome.cs">
+    <Compile Include="Forms\Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Welcome.Designer.cs">
+    <Compile Include="Forms\Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeScreen.cs">
+    <Compile Include="UserControls\WelcomeScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="WelcomeScreen.Designer.cs">
+    <Compile Include="UserControls\WelcomeScreen.Designer.cs">
       <DependentUpon>WelcomeScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="UserControls\FindCallNumbers.resx">
+      <DependentUpon>FindCallNumbers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IdentifyAreas.resx">
+    <EmbeddedResource Include="UserControls\IdentifyAreas.resx">
       <DependentUpon>IdentifyAreas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReplacingBooks.resx">
+    <EmbeddedResource Include="UserControls\ReplacingBooks.resx">
       <DependentUpon>ReplacingBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserFeedback.resx">
+    <EmbeddedResource Include="UserControls\UserFeedback.resx">
       <DependentUpon>UserFeedback.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Welcome.resx">
+    <EmbeddedResource Include="Forms\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeScreen.resx">
+    <EmbeddedResource Include="UserControls\WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -221,6 +232,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Mask group %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DeweyFile.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

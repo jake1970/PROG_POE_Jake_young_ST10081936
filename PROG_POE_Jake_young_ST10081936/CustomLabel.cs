@@ -45,7 +45,7 @@ namespace PROG_POE_Jake_young_ST10081936
 
         //------------------------------------------------------------------------------------------------------------------
         /// <summary>
-        /// Method to format the label to appear centered on the spine of the book
+        /// Method to format the label to appear centered on the spine of the book that was created with code
         /// </summary>
         /// <param name="labelParent"></param>
         public void FormatLabel(Panel labelParent)
@@ -60,6 +60,24 @@ namespace PROG_POE_Jake_young_ST10081936
         }
         //------------------------------------------------------------------------------------------------------------------
 
+
+
+        //------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Method to format the label to appear centered on the spine of the book that was created with drag and drop
+        /// </summary>
+        /// <param name="labelParent"></param>
+        public void ManualFormatLabel(Panel labelParent)
+        {
+            this.TextAlign = ContentAlignment.MiddleCenter;
+            this.AutoSize = true;
+            this.Width = labelParent.Width;
+            this.MaximumSize = new Size(labelParent.Width - 30, 0);
+            this.MinimumSize = new Size(labelParent.Width - 30, 0);
+            this.Left = 4;
+            this.Top = ((labelParent.Height - this.Height) / 2) + 4;
+        }
+        //------------------------------------------------------------------------------------------------------------------
 
     }
 }

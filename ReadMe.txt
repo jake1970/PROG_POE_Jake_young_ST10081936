@@ -28,7 +28,7 @@ To use the software:
 		1. Replacing Books
 		2. Identify Areas
 		3. Find Call Numbers
-	Note: Currently only Replacing Books and Identify Areas are implemented with the final game to follow soon.
+
 
 	Replacing Books:
 	Select the "Replacing Books" book option on the bottom of the shelf on the welcome screen, this will start the game.
@@ -84,20 +84,60 @@ To use the software:
 	is started over in the reverse configuration, if the previous game was matching the call numbers to the descriptions,
 	the new round will be the opposite and vice versa. The results screen shows a close button in the top left indicated by
 	an "X", upon clicking, the game will close along with the form.
-	 
+
+	
+	Find Call Numbers:
+	Select the "Find Call Numbers" book option on the bottom of the shelf on the welcome screen, this will start the game.
+	The game will open to a shelf view, the left shelf contains a top and bottom section, with the top section containing a
+	book with a third level call numbers description (the call number and question level are not shown there). The bottom
+	appears empty until a book is clicked, upon which the bottom section will appear highlighted to indicate where to place
+	the chosen answer. The right shelf contains a stacked list of 4 books, these books display the possible answers to the
+	given question, the user must click and drag the associated answer into the bottom left shelf. When the game starts, 
+	the initial potential answers will consist of first level list entries, each time a correct answer is given, the
+	potential answers will change to consist of the next level of list entires, until the most detailed list level is reached.
+	When an incorrect answer is selected, the initial third level question will be regenerated and a new question will be asked.
+	The potential answers contain the list levels dewey decimal call number (excluding the decimal points) and the associated
+	description. The list of potential answers consists of the correct answer and 3 incorrect answers. Located on the top of the
+	shelf, there is a game timer. The player has 3 minutes to complete a question before the game is ended. If the user completes
+	the game within the 3 minutes, the game will end as a win and the user will be shown the feedback screen. Located to the right
+	of the timer is a book containing 3 hearts. These hearts represent the chances that a user has at making a correct submission.
+	If an incorrect submission is given a player "life" or chance will be lost and a sound will be played, following this one of
+	the hearts contained in the book will animate and break to indicate that it is invalid. If the user loses all 3 "lives"
+	the game will end and be counted as a loss. If the user runs out of time or they lose all 3 "lives" the game will end
+	and be counted as a loss, the feedback screen will then be shown to the user. The feedback screen contains the game outcome,
+	wether the user won or lost, the user score, the time taken, as well as a play again button towards the bottom of the screen.
+	The players score is calculated using the amount of lives remaining, multiplied by the game time in seconds minus the time
+	taken in seconds. Upon clicking play again, the feedback screen will be dismissed and the game will be restarted. The feedback
+	screen contains a dismiss button indicated by an "X" located at the top left of the screen. Located in the top right of the
+	find call numbers game screen are the action buttons. The right most button is the submit button (indicated with a tick symbol),
+	when clicked it will check the submitted answer if it is valid. If the given answer is correct, the player will be shown a prompt,
+	informing them that they have submitted the correct choice, however if the given answer is incorrect, the player will be shown a
+	prompt informing them that the given answer is incorrect and a player "life" will be lost. If the submit button is clicked and
+	no books are submitted, the user will be informed that they need to make a selection of an answer, the slot where the book must
+	be placed will blink twice to further indicate this. To the left of the submit button is the reset button, indicated by an arrow
+	turning into itself, when clicked it will move the currently selected book back into the stack of potential answers.
+
+
+
 		
 
 Other Information
 ------------------------------------------------------------------------------------------------------------
 
-The game displays a random set of dewey decimals in a series of books that are randomly assigned a color.
+The game displays a random set of dewey decimal related data in a series of books that are randomly assigned a color.
 
 In the first game "Replacing Books", the data concerning both the books and slots on the shelf is stored using a list of a custom structure type, one for
 book data and the other for slot data.
 
 In the second game "Identify Areas", a dictionary is used to hold all of the call numbers and their descriptions and lists of custom structures are used
-to hold the book data, as well as this, a custom label class is created and used to apply custom styling to the labels displayed on the books when the text
-is disabled
+to hold the book data.
+
+In the third game "Find Call Numbers", a Red Black Tree is used to store the dewey decimal related data, the key is populated with the call number and the 
+data associated is inputted into a structure that contains the associated call number (as a string to preserve its format), call numbers description and position (list level) in the multi level list.
+
+In the second and third game, a custom label class is created and used to apply custom styling to the labels displayed on the books when the text
+is disabled. This allows for the user to interact with the labels while still allowing for events to be passed to the panel behind it, allowing the
+player to still drag a book even when the text is selected instead of the panel. 
 
 The app contains gifs designed to animate once before stopping, if a new animation attempts to start before the previous
 animation completes, the previous animation will be instantly completed and the new animation will begin.
@@ -115,6 +155,7 @@ Throughout the app, various sources were used:
 	ChatGPT:
 	- https://chat.openai.com/share/fb07dba1-4993-46f3-beea-3607ea018bac > dewey decimal generation
 	- https://chat.openai.com/share/1765476c-69b1-4e50-a66f-fd9efc287769 > random author generation
+	- https://chat.openai.com/share/19c6bf9b-abfe-4505-9e7b-a6a290bfb6e5 > access tree elements and go through tree data
 	
 	StackOverflow:
 	- https://stackoverflow.com/a/14282467 > disable image stuttering when moving
@@ -133,6 +174,9 @@ Throughout the app, various sources were used:
 
 	CSharpInDeep
 	- https://csharpindeep.wordpress.com/2013/08/10/c-snippet-shuffling-a-dictionary-beginner/ > randomise the order of a dictionary
+	
+	Simple Dev Code
+	- https://simpledevcode.wordpress.com/2014/12/25/red-black-tree-in-c/ > Red Black Tree Assistance
 	
 	
 Github
